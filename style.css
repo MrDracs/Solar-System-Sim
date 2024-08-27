@@ -9,6 +9,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-size:large;
     font-weight: bold;
+    text-align: center;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -23,5 +24,22 @@ body{
 
 #loader {
     width: 40%;
-    margin-top: 0.5%;
+}
+#Mobile {
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    .loader-container {
+        font-size: small;
+    }
+    #loader {
+        width: 60%;
+    }
+    #Mobile {
+        display: block;
+    }
+    #PC {
+        display: none;
+    }
+
 }
