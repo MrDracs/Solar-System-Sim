@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.loader-container {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:large;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#loader {
+    width: 30%;
+    margin-top: 0.5%;
+}

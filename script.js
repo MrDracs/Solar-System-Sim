@@ -2,8 +2,43 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 // initialize the scene
 const scene = new THREE.Scene()
+
+// loading screen with loading manager
+const loadingManager = new THREE.LoadingManager();
+
+// loadingManager.onStart = function(url, item, total) {
+//     console.log(`Started loading: ${url}`);
+// }
+
+const Loader = document.getElementById('loader');
+
+loadingManager.onProgress = function(url, loaded, total) {
+    Loader.value = (loaded / total) * 100;
+}
+
+const LoaderContainer = document.querySelector('.loader-container');
+
+loadingManager.onLoad = function() {
+    LoaderContainer.style.display = 'none';
+}
+
+
+// Load HDRI loader (environment map - cubeTextureLoader)
+const cubeTextureLoader = new THREE.CubeTextureLoader(loadingManager)
+const environmentCubeMap = cubeTextureLoader.setPath( '/textures/environmentMaps/MilkyWay/' )
+.load([
+  'px.png',
+  'nx.png',
+  'py.png',
+  'ny.png',
+  'pz.png',
+  'nz.png'
+])
+// set the environment map to the scene
+scene.background = environmentCubeMap
+
 // texture loader
-const textureLoader = new THREE.TextureLoader()
+const textureLoader = new THREE.TextureLoader(loadingManager)
 // load the textures
 const sunTexture = textureLoader.load('/textures/sun.jpg')
 const sunNormal = textureLoader.load('/textures/SunNormal.png')
@@ -29,19 +64,6 @@ const saturnRingTexture = textureLoader.load('/textures/saturnRing.png')
 const uranusTexture = textureLoader.load('/textures/uranus.jpg')
 const neptuneTexture = textureLoader.load('/textures/neptune.jpg')
 
-// Load HDRI loader (environment map - cubeTextureLoader)
-const cubeTextureLoader = new THREE.CubeTextureLoader()
-const environmentCubeMap = cubeTextureLoader.setPath( '/textures/environmentMaps/MilkyWay/' )
-.load([
-  'px.png',
-  'nx.png',
-  'py.png',
-  'ny.png',
-  'pz.png',
-  'nz.png'
-])
-// set the environment map to the scene
-scene.background = environmentCubeMap
 
 // creating a json like object to store the planets and their textures
 const planets = [{
