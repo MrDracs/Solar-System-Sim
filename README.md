@@ -15,11 +15,11 @@ To get started with the Solar System project, follow these steps:
 Here are some screenshots of the Solar System project:
 
 The loading screen of the Solar System project.
-<img src="/public/ss/loading-screen-phone.png" alt="loading-screen-phone"  width="70%">
+<img src="/public/ss/loading-screen.png" alt="loading-screen" width="70%">
 
+The loading screen of the Solar System project  on Mobile Phones.
+<img src="/public/ss/loading-screen-phone.png" alt="loading-screen-phone"  width="30%">
 
-The loading screen of the Solar System project on Mobile Phones.
-<img src="/public/ss/loading-screen.png" alt="loading-screen" width="30%">
 
 A side view of the solar system.
 
