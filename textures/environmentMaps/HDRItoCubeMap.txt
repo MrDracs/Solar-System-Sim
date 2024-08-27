@@ -1,0 +1,2 @@
+to convert hdri to cubemap(nx,ny,px,py, whatever):
+go to - https://matheowis.github.io/HDRI-to-CubeMap/
