@@ -1,5 +1,6 @@
 export default {
-    root: '/public/',
-    publicDir: '/public/',
-    base: "/Solar-System-Sim/",
+    root: './',
+    publicDir: 'public/',
+    base: "/Solar-System-Sim",
+    
 }
