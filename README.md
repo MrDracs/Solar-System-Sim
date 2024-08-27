@@ -4,6 +4,13 @@
 
 Welcome to the **Solar System** project! This project aims to create a visually stunning and interactive representation of our solar system using the Three.js library. 🌍🌞🌙
 
+## ✨ Features:
+
+- Realistic 3D models of planets, moons, and the sun
+- Interactive controls for navigating the solar system
+- Dynamic lighting and textures for an immersive experience
+- Responsive design for both desktop and mobile browsers
+
 ## 🚀 Installation
 
 To get started with the Solar System project, follow these steps:
